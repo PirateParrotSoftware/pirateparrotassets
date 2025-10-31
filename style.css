@@ -1,0 +1,298 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2707
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 /* Simple dark theme portfolio styles */\
+\
+:root \{\
+  --bg: #0f172a;\
+  --panel: #1e2537;\
+  --text-main: #f8fafc;\
+  --text-dim: #94a3b8;\
+  --accent: #38bdf8;\
+  --radius-lg: 16px;\
+  --radius-sm: 8px;\
+  --border-color: rgba(148,163,184,0.15);\
+  --panel-border: rgba(255,255,255,0.05);\
+  --shadow-card: 0 20px 40px rgba(0,0,0,0.6);\
+  --max-width: 1200px;\
+  --transition-fast: 0.16s ease;\
+  --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Inter", Roboto, "Segoe UI", sans-serif;\
+\}\
+\
+* \{\
+  box-sizing: border-box;\
+  -webkit-font-smoothing: antialiased;\
+\}\
+\
+body \{\
+  margin: 0;\
+  background-color: var(--bg);\
+  color: var(--text-main);\
+  font-family: var(--font-stack);\
+  line-height: 1.5;\
+  display: flex;\
+  flex-direction: column;\
+  min-height: 100vh;\
+\}\
+\
+header \{\
+  border-bottom: 1px solid var(--border-color);\
+  background: rgba(15,23,42,0.6);\
+  backdrop-filter: blur(8px);\
+  position: sticky;\
+  top: 0;\
+  z-index: 10;\
+\}\
+\
+.navbar \{\
+  max-width: var(--max-width);\
+  margin: 0 auto;\
+  padding: 16px 20px;\
+  display: flex;\
+  flex-wrap: wrap;\
+  align-items: center;\
+  justify-content: space-between;\
+  gap: 12px;\
+\}\
+\
+.brand \{\
+  font-weight: 600;\
+  font-size: 16px;\
+  color: var(--text-main);\
+  display: flex;\
+  align-items: baseline;\
+  gap: 8px;\
+\}\
+.brand .sub \{\
+  font-size: 12px;\
+  color: var(--text-dim);\
+  font-weight: 400;\
+\}\
+\
+.nav-links \{\
+  display: flex;\
+  gap: 20px;\
+  flex-wrap: wrap;\
+\}\
+.nav-links a \{\
+  color: var(--text-dim);\
+  text-decoration: none;\
+  font-size: 14px;\
+  padding: 6px 0;\
+  transition: color var(--transition-fast);\
+\}\
+.nav-links a.active,\
+.nav-links a:hover \{\
+  color: var(--accent);\
+\}\
+\
+.main-content \{\
+  max-width: var(--max-width);\
+  width: 100%;\
+  margin: 32px auto 64px;\
+  padding: 0 20px;\
+  flex: 1;\
+\}\
+\
+.section-head \{\
+  margin-bottom: 24px;\
+\}\
+.section-eyebrow \{\
+  font-size: 12px;\
+  font-weight: 500;\
+  color: var(--accent);\
+  text-transform: uppercase;\
+  letter-spacing: 0.08em;\
+  margin-bottom: 6px;\
+\}\
+.section-title \{\
+  font-size: clamp(20px, 2vw, 24px);\
+  font-weight: 600;\
+  color: var(--text-main);\
+  margin: 0 0 8px;\
+\}\
+.section-desc \{\
+  font-size: 14px;\
+  color: var(--text-dim);\
+  max-width: 700px;\
+  margin: 0;\
+\}\
+\
+/* ASSET GRID */\
+.asset-grid \{\
+  display: grid;\
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,280px),1fr));\
+  gap: 24px;\
+\}\
+\
+.card \{\
+  background-color: var(--panel);\
+  border-radius: var(--radius-lg);\
+  border: 1px solid var(--panel-border);\
+  box-shadow: var(--shadow-card);\
+  display: flex;\
+  flex-direction: column;\
+  overflow: hidden;\
+\}\
+\
+.card-thumb \{\
+  width: 100%;\
+  aspect-ratio: 16 / 9;\
+  background-color: #1e293b;\
+  background-size: cover;\
+  background-position: center;\
+  border-bottom: 1px solid var(--panel-border);\
+\}\
+\
+.card-body \{\
+  padding: 16px 16px 20px;\
+  display: flex;\
+  flex-direction: column;\
+  flex: 1;\
+\}\
+\
+.card-title \{\
+  color: var(--text-main);\
+  font-size: 15px;\
+  font-weight: 600;\
+  margin: 0 0 8px;\
+  word-break: break-word;\
+\}\
+\
+.card-meta \{\
+  color: var(--text-dim);\
+  font-size: 13px;\
+  line-height: 1.4;\
+  flex: 1;\
+  margin-bottom: 16px;\
+  word-break: break-word;\
+\}\
+\
+.card-tags \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 6px;\
+  margin-bottom: 16px;\
+\}\
+.tag-pill \{\
+  background-color: rgba(56,189,248,0.12);\
+  color: var(--accent);\
+  font-size: 11px;\
+  line-height: 1.2;\
+  padding: 4px 8px;\
+  border-radius: var(--radius-sm);\
+  border: 1px solid rgba(56,189,248,0.32);\
+  font-weight: 500;\
+\}\
+\
+.card-actions \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 8px;\
+\}\
+\
+.btn \{\
+  appearance: none;\
+  display: inline-block;\
+  border-radius: var(--radius-sm);\
+  text-decoration: none;\
+  font-size: 13px;\
+  font-weight: 500;\
+  line-height: 1.2;\
+  padding: 10px 12px;\
+  border: 1px solid transparent;\
+  cursor: pointer;\
+  transition: all var(--transition-fast);\
+  white-space: nowrap;\
+\}\
+.btn-primary \{\
+  background-color: var(--accent);\
+  color: #0f172a;\
+  border-color: var(--accent);\
+\}\
+.btn-primary:hover \{\
+  filter: brightness(1.1);\
+\}\
+.btn-ghost \{\
+  background-color: rgba(148,163,184,0.08);\
+  border-color: rgba(148,163,184,0.24);\
+  color: var(--text-main);\
+\}\
+.btn-ghost:hover \{\
+  background-color: rgba(148,163,184,0.16);\
+\}\
+\
+/* GENERIC TEXT BLOCKS */\
+.text-block \{\
+  background-color: var(--panel);\
+  border-radius: var(--radius-lg);\
+  border: 1px solid var(--panel-border);\
+  box-shadow: var(--shadow-card);\
+  padding: 24px 24px 28px;\
+  max-width: 800px;\
+  font-size: 15px;\
+  line-height: 1.5;\
+  color: var(--text-main);\
+\}\
+.text-block p \{\
+  margin: 0 0 16px;\
+  color: var(--text-dim);\
+  font-size: 14px;\
+  line-height: 1.6;\
+\}\
+.text-block h2 \{\
+  margin-top: 0;\
+  margin-bottom: 12px;\
+  font-size: 18px;\
+  font-weight: 600;\
+  color: var(--text-main);\
+\}\
+.text-block a \{\
+  color: var(--accent);\
+  text-decoration: none;\
+\}\
+.text-block a:hover \{\
+  text-decoration: underline;\
+\}\
+\
+/* FOOTER */\
+footer \{\
+  border-top: 1px solid var(--border-color);\
+  background-color: #0f172a;\
+  color: var(--text-dim);\
+  font-size: 12px;\
+\}\
+.footer-inner \{\
+  max-width: var(--max-width);\
+  margin: 0 auto;\
+  padding: 24px 20px 40px;\
+  display: flex;\
+  flex-direction: column;\
+  gap: 8px;\
+\}\
+.footer-brand \{\
+  color: var(--text-main);\
+  font-weight: 500;\
+  font-size: 13px;\
+\}\
+.footer-links \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 16px;\
+\}\
+.footer-links a \{\
+  color: var(--text-dim);\
+  text-decoration: none;\
+  transition: color var(--transition-fast);\
+  font-size: 12px;\
+\}\
+.footer-links a:hover \{\
+  color: var(--accent);\
+\}\
+}
