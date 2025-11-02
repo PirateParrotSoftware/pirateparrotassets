@@ -244,9 +244,12 @@ header {
   font-weight: 600;
   color: var(--text-main);
 }
-.text-block .contact-heading {
+.contact-heading {
   font-size: clamp(28px, 4vw, 36px);
   letter-spacing: -0.01em;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text-main);
 }
 .text-block a {
   color: var(--accent);
