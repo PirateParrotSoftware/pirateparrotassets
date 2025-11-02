@@ -48,7 +48,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
 }
 
@@ -80,6 +80,7 @@ header {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 .nav-links a {
   color: var(--text-dim);
